@@ -2,5 +2,9 @@
 
 Factory.define :user do |f|
   f.name "MyString"
-  f.api_token "MyString"
+  f.api_token {Factory.next :api_token}
+end
+
+Factory.sequence :api_token do |n|
+  "token#{n}"
 end
