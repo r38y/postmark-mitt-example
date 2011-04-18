@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
     api_token = mitt.to.split("@").first.split("+").last
     user = User.find_by_api_token(api_token)
     if user
-      post = user.post.new
+      post = user.posts.new
       post.message_id = mitt.message_id
       post.title      = mitt.subject
       post.body       = mitt.body
