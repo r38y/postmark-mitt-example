@@ -10,7 +10,12 @@ class Post < ActiveRecord::Base
       post = user.posts.new
       post.message_id = mitt.message_id
       post.title      = mitt.subject
-      post.body       = mitt.body
+      post.body = if mitt.text_body.blank?
+        mitt.html_body
+      else
+        mitt.text_body
+      end
+      # post.photo = mitt.attachments.first.read unless mitt.attachments.empty?
       post.save
     else
       return false
