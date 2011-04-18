@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PostmarkMittExample</title>
+  <title>Postmark Mitt Example</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <p>This is an example app showing how to accept incoming email with <a href="http://postmarkapp.com/">Postmark</a> using the <a href="https://github.com/r38y/postmark-mitt">postmark-mitt gem</a>.</p>
 
-<%= yield %>
+  <p>Simply send an email to <strong>postmark-mitt+tyler@forge38.com</strong> to post something as <strong>Tyler Durden</strong> or to <strong>postmark-mitt+robert@forge38.com</strong> to post something as <strong>Robert Paulson</strong>.</p>
+
+  <p>Source code available at <a href="https://github.com/r38y/postmark-mitt-example">https://github.com/r38y/postmark-mitt-example</a>.</p>
+
+  <%= yield %>
 
 </body>
 </html>
