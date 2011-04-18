@@ -1,4 +1,6 @@
 class Api::PostsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
+
   def create
     # make sure the thing posting has rights to post here... maybe with
     # http basic auth or a super secret token
