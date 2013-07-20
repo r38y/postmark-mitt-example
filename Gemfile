@@ -12,6 +12,10 @@ group :development do
   gem 'rails3-generators'
 end
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-debugger'
+end
 group :test do
   gem 'factory_girl_rails', '1.1.beta1'
   gem 'shoulda'
